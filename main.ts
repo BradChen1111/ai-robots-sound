@@ -30,7 +30,7 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
         basic.showString("T")
         music.play(music.stringPlayable("C5 G B A F A C5 B ", 120), music.PlaybackMode.UntilDone)
     } else if (SerialData == "None") {
-        basic.showString("N")
+        basic.showString("None")
     }
 })
 let SerialData = ""
