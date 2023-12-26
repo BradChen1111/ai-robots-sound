@@ -4,7 +4,9 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "audio-recording": "*",
+        "koi": "github:kittenbot/pxt-koi#v0.6.8"
     },
     "files": [
         "main.blocks",

@@ -20,12 +20,17 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
     SerialData = serial.readUntil(serial.delimiters(Delimiters.NewLine))
     music.playTone(262, music.beat(BeatFraction.Eighth))
     // This If statement checks that variable with the class name, and if it matches the class name you entered, it will activate the code within that block
-    if (SerialData == "phoebe") {
-        basic.showIcon(IconNames.Heart)
-    } else if (SerialData == "Mami") {
-        basic.showIcon(IconNames.Happy)
-    } else {
-        basic.showIcon(IconNames.Meh)
+    if (SerialData == "blackCup") {
+        basic.showString("B")
+        music.play(music.stringPlayable("C5 B A G F E D C ", 120), music.PlaybackMode.UntilDone)
+    } else if (SerialData == "stainlessCup") {
+        basic.showString("S")
+        music.play(music.stringPlayable("C D E F G A B C5 ", 120), music.PlaybackMode.UntilDone)
+    } else if (SerialData == "transCup") {
+        basic.showString("T")
+        music.play(music.stringPlayable("C5 G B A F A C5 B ", 120), music.PlaybackMode.UntilDone)
+    } else if (SerialData == "None") {
+        basic.showString("N")
     }
 })
 let SerialData = ""
